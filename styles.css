@@ -118,7 +118,7 @@ main{
     opacity: .7;
 }
 
-.shoe-image:focus{
+.shoe-image-click{
     border: 2px solid var(--orange);
     opacity: .7;
 }
