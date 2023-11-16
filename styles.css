@@ -80,6 +80,18 @@ li a{
     gap: 40px;
 }
 
+.shopping-cart-image{
+    position: relative;
+}
+
+.cart{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+}
+
 /* Main content */
 main{
     padding: 50px;
