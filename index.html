@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">    
+    <title>eCommerce Product Page</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="#"><img src="images/logo.svg" class="logo" alt="sneakers logo"></a>
+            <ul class="nav-list">
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hero-cart">
+            <a href="#"><img src="images/icon-cart.svg" class="shopping-cart-image" alt="Image of a shopping cart"></a>
+            <a href="#"><img src="images/image-avatar.png" class="profile-avatar" alt="Picture of logged in user"></a>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="shoe-display">
+            <div id="hero-image" class="hero-image">
+                <img src="images/image-product-1.jpg" id="main-shoe-image" class="main-shoe-image" alt="Images of displayed shoes">
+            </div>
+            <div class="thumbnail-images">
+                <img src="images/image-product-1-thumbnail.jpg" id="image-product-1" class="shoe-image" alt="Image of displayed shoes">
+                <img src="images/image-product-2-thumbnail.jpg" id="image-product-2" class="shoe-image" alt="Image of displayed shoes">
+                <img src="images/image-product-3-thumbnail.jpg" id="image-product-3" class="shoe-image" alt="Image of displayed shoes">
+                <img src="images/image-product-4-thumbnail.jpg" id="image-product-4" class="shoe-image" alt="Image of displayed shoes">
+            </div>
+        </section>
+        
+        <section class="shoe-info">
+            <h3>SNEAKER COMPANY</h3>
+            <h2>Fall Limited Edition Sneakers</h2>
+            <p class="info">These low-profile sneakers are your perfect casual wear
+               companion. Featuring a durable rubber outer sole, they'll
+               withstand everything the weather can offer.
+            </p>
+            <div class="pricing">
+                    <p class="sale-amount">$125.00</p>
+                    <p class="sale-percent">50%</p>
+            </div>
+            <p class="original-price">$250.00</p>
+            <div class="hero-button">
+                <div class="inventory">
+                    <button class="subtract"><img src="images/icon-minus.svg" class="minus-icon" alt="Minus symbol"></button>
+                    <p class="quantity">0</p>
+                    <button class="add"><img src="images/icon-plus.svg" class="plus-icon" alt="Plus symbol"></button>
+                </div>
+                <button class="add-to-cart-btn"><img src="images/icon-cart.svg" class="add-to-cart-img" alt="Cart Icon">Add to cart</button>      
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
