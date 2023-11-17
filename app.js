@@ -1,15 +1,26 @@
-let mainShoeImage = document.querySelector('#main-shoe-image');
+const mainShoeImage = document.querySelector('#main-shoe-image');
 
 const imageProduct1 = document.querySelector('#image-product-1');
 const imageProduct2 = document.querySelector('#image-product-2');
 const imageProduct3 = document.querySelector('#image-product-3');
 const imageProduct4 = document.querySelector('#image-product-4');
 
+const cart = document.querySelector("#cart")
+const shoppingCartImage = document.querySelector(".shopping-cart-image")
+
+const minusBtn = document.querySelector('#minus-btn')
+const plusBtn = document.querySelector('#plus-btn')
+const quantity = document.querySelector('#qty').value
 
 imageProduct1.addEventListener('click', getProduct1)
 imageProduct2.addEventListener('click', getProduct2)
 imageProduct3.addEventListener('click', getProduct3)
 imageProduct4.addEventListener('click', getProduct4)
+
+shoppingCartImage.addEventListener('click', showCart)
+
+minusBtn.addEventListener('click', subtractQty)
+plusBtn.addEventListener('click', addQty)
 
 function getProduct1(){
     mainShoeImage.src = 'images/image-product-1.jpg'
@@ -41,4 +52,28 @@ function getProduct4(){
     imageProduct2.classList.remove('shoe-image-click')
     imageProduct3.classList.remove('shoe-image-click')
     imageProduct1.classList.remove('shoe-image-click')
+}
+
+function showCart(){
+    if(cart.classList.contains('cart')){
+        cart.classList.remove('cart')
+        cart.classList.add('cart-hidden')
+    }
+    else if(cart.classList.contains('cart-hidden')){
+        cart.classList.remove('cart-hidden')
+        cart.classList.add('cart')
+    } 
+}
+
+function subtractQty(){
+    if(quantity.value > 0){
+        quantity.innerHTML = quantity.innerHMTL--
+    }else{
+        return
+    }
+}
+
+function addQty(){
+    let sum = Number(quantity)
+    console.log(sum)
 }
