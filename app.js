@@ -10,7 +10,12 @@ const shoppingCartImage = document.querySelector(".shopping-cart-image")
 
 const minusBtn = document.querySelector('#minus-btn')
 const plusBtn = document.querySelector('#plus-btn')
-const quantity = document.querySelector('#qty').value
+const quantity = document.querySelector('#qty')
+let count = 0
+quantity.innerHTML = count
+
+plusBtn.addEventListener('click', addQty)
+minusBtn.addEventListener('click', deleteQty)
 
 imageProduct1.addEventListener('click', getProduct1)
 imageProduct2.addEventListener('click', getProduct2)
@@ -18,9 +23,6 @@ imageProduct3.addEventListener('click', getProduct3)
 imageProduct4.addEventListener('click', getProduct4)
 
 shoppingCartImage.addEventListener('click', showCart)
-
-minusBtn.addEventListener('click', subtractQty)
-plusBtn.addEventListener('click', addQty)
 
 function getProduct1(){
     mainShoeImage.src = 'images/image-product-1.jpg'
@@ -65,15 +67,16 @@ function showCart(){
     } 
 }
 
-function subtractQty(){
-    if(quantity.value > 0){
-        quantity.innerHTML = quantity.innerHMTL--
-    }else{
-        return
-    }
+function addQty(){
+    count++;
+    quantity.innerHTML = count
 }
 
-function addQty(){
-    let sum = Number(quantity)
-    console.log(sum)
+function deleteQty(){
+    if(count <= 0){
+        return
+    }else{
+        count--
+        quantity.innerHTML = count
+    }
 }

@@ -74,6 +74,7 @@ li a{
     border: 2px solid var(--orange);
 }
 
+/* Cart Info section */
 .hero-cart{
     display: flex;
     align-items: center;
@@ -85,7 +86,7 @@ li a{
     background-color: white;
     box-shadow: 0 10px 30px -10px;
     border-radius: 8px;
-    width: 300px;
+    width: 400px;
     min-height: 200px;
     position: absolute;
     top: 50px;
@@ -98,11 +99,70 @@ li a{
     border-bottom: 1px solid var(--grayish-blue);
 }
 
+.cart-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cart Content box */
 .cart-content{
     color: var(--dark-grayish-blue);
     font-weight: var(--font-weight-700);
-    text-align: center;
-    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.cart-thumbnail-img{
+    width: 50px;
+    border-radius: 5px;
+}
+
+.cart-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart-info p{
+    font-weight: var(--font-weight-400);
+}
+
+.cart-info span{
+    font-weight: var(--font-weight-700);
+    color: var(--black);
+}
+
+.trash-img{
+    width: 15px;
+    height: 20px;
+}
+
+.trash-img:hover{
+    cursor: pointer;
+}
+
+.checkout{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: var(--font-weight-700);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    width: 80%;
+    padding: 12px;
+    font-size: 12px;
+    box-shadow: 0px 15px 15px var(--pale-orange);
+}
+
+.checkout:hover{
+    cursor: pointer;
 }
 
 .cart-hidden {display: none}
@@ -114,7 +174,6 @@ main{
     margin: auto;
     align-items: center;
     gap: 80px;
-    
 }
 
 /* Shoe image displays section*/

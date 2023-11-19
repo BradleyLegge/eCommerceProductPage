@@ -24,9 +24,20 @@
         <div class="hero-cart">
             <a href="#"><img src="images/icon-cart.svg" class="shopping-cart-image" alt="Image of a shopping cart"></a>
             <a href="#"><img src="images/image-avatar.png" class="profile-avatar" alt="Picture of logged in user"></a>
-            <div class="cart-hidden" id="cart">
+            <div class="cart-hidden" id="cart"> <!--TODO NEED TO CHANGE BACK TO "CART-HIDDEN"-->
                 <p class="cart-header">Cart</p>
-                <p class="cart-content">Your cart is empty.</p>
+                <!-- <div class="cart-content-empty">Your cart is empty.</div> -->
+                <div class="cart-wrapper">
+                    <div class="cart-content">
+                        <img src="images/image-product-1-thumbnail.jpg" class="cart-thumbnail-img" alt="Image of displayed shoes">
+                        <div class="cart-info">
+                            <p class="item-name">Fall Limited Edition Sneakers</p>
+                            <p class="total-amount">$125.00 x 3 <span>$375.00</span></p>
+                        </div>
+                        <img src="images/icon-delete.svg" class="trash-img" alt="Image of a trashcan">     
+                    </div>
+                    <button id="checkout" class="checkout">Checkout</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -58,9 +69,9 @@
             <p class="original-price">$250.00</p>
             <div class="hero-button">
                 <div class="inventory">
-                    <button class="subtract"><img src="images/icon-minus.svg" id="minus-btn" class="minus-icon" alt="Minus symbol"></button>
-                    <p class="quantity" id="qty">0</p>
-                    <button class="add"><img src="images/icon-plus.svg" id="plus-btn" class="plus-icon" alt="Plus symbol"></button>
+                    <button class="subtract"  id="minus-btn"><img src="images/icon-minus.svg" class="minus-icon" alt="Minus symbol"></button>
+                    <p class="quantity" id="qty"></p>
+                    <button class="add" id="plus-btn"><img src="images/icon-plus.svg" class="plus-icon" alt="Plus symbol"></button>
                 </div>
                 <button class="add-to-cart-btn"><img src="images/icon-cart.svg" class="add-to-cart-img" alt="Cart Icon">Add to cart</button>      
             </div>
